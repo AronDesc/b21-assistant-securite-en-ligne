@@ -82,3 +82,11 @@ Chacun, une phrase : ce que vous savez faire ce soir et que vous ne saviez pas f
 - Ce que j'ai observé : « Je connais « salut », « aide », « test », et deux mots à moi : « motdepasse » et « arnaque » et « phishing ». » La prédiction était juste.
 - Correction : « deux » remplacé par `${Object.keys(MOTS).length}`, le nombre est maintenant calculé à partir de l'objet `MOTS`.
 - Après : « Je connais « salut », « aide », « test », et 3 mots à moi : « motdepasse » et « arnaque » et « phishing ». »
+
+### Étape 3 · L'accessibilité avec Lighthouse
+
+- Score Accessibilité de départ (Chrome, Desktop) : 100.
+- Score sans le `label` du champ : 93.
+- Alerte affichée (catégorie « Names and labels ») : « Form elements do not have associated labels ». Sans `label`, un lecteur d'écran ne peut pas annoncer à quoi sert le champ.
+- Label remis ensuite à l'identique.
+- Essai au clavier seul : Tab jusqu'au champ, message « Salut, j'ai besoin d'aide », envoi au clavier. Le message part, Cap Web répond par le repli (« Je ne connais pas encore cette phrase… ») parce qu'il ne reconnaît que des mots exacts, et le focus revient dans le champ, prêt pour le message suivant.
