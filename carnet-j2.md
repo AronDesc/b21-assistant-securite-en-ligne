@@ -6,20 +6,20 @@ Binôme : b21 · Membres : Aron DESCARPENTRIES (seul) · Nos réglages sont dans
 
 Pour chaque notion, chacun écrit « à l'aise » ou « à renforcer ». Ce n'est ni évalué ni classé : c'est votre point de départ pour le bilan individuel de fin de module.
 
-| Notion | Membre 1 : … | Membre 2 : … |
+| Notion | Membre 1 : Aron | Membre 2 : — (seul) |
 |---|---|---|
-| Structure HTML | | |
-| CSS et responsive | | |
-| JavaScript | | |
-| DOM et événements | | |
-| Git | | |
-| Tests | | |
+| Structure HTML | à l'aise | — |
+| CSS et responsive | à l'aise | — |
+| JavaScript | à l'aise | — |
+| DOM et événements | assez à l'aise | — |
+| Git | à l'aise | — |
+| Tests | à l'aise | — |
 
 Chacun, en une phrase, son objectif personnel pour J2 et J3.
 
-Membre 1 :
+Membre 1 : devenir pleinement à l'aise avec le DOM et les événements, et savoir expliquer chaque modification livrée.
 
-Membre 2 :
+Membre 2 : — (seul)
 
 ## R1 · Les tests automatisés
 
