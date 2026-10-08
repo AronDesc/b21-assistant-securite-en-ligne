@@ -18,6 +18,13 @@ const REPONSES = {
   repli: 'Je ne connais pas encore cette phrase. Écrivez « aide » pour voir les mots que je connais.'
 };
 
+// Un message de l'historique : un objet avec un rôle connu et un texte.
+export function estMessage(m) {
+  return typeof m === 'object' && m !== null
+    && (m.role === 'user' || m.role === 'assistant')
+    && typeof m.text === 'string';
+}
+
 export function validateMessage(raw) {
   if (typeof raw !== 'string') {
     return { ok: false, error: 'Le message doit être du texte.' };
