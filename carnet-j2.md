@@ -1,6 +1,6 @@
 # Carnet de bord · J2
 
-Binôme : bXX · Membres : … · Nos réglages sont dans `atelier/cahier-personnel.json` : ne les recopiez pas ici.
+Binôme : b21 · Membres : Aron DESCARPENTRIES (seul) · Nos réglages sont dans `atelier/cahier-personnel.json` : ne les recopiez pas ici.
 
 ## Mon positionnement (chacun de vous deux)
 
@@ -72,3 +72,13 @@ Pour aller plus loin : le patch que vous avez corrigé, et ce que vous avez chan
 ## Fin de journée
 
 Chacun, une phrase : ce que vous savez faire ce soir et que vous ne saviez pas faire ce matin. Relisez votre positionnement : une notion est-elle passée de « à renforcer » à « à l'aise » ?
+
+## J3 · Les 12 étapes
+
+### Étape 1 · Le troisième mot
+
+- Mot ajouté : « phishing ».
+- Ma prédiction (avant de toucher au code) : il faudra changer la phrase de « aide » pour qu'elle dise « trois mots à moi » ; sinon elle annoncera toujours « deux mots », parce que ce nombre est écrit à la main, alors que la liste affichera bien les trois.
+- Ce que j'ai observé : « Je connais « salut », « aide », « test », et deux mots à moi : « motdepasse » et « arnaque » et « phishing ». » La prédiction était juste.
+- Correction : « deux » remplacé par `${Object.keys(MOTS).length}`, le nombre est maintenant calculé à partir de l'objet `MOTS`.
+- Après : « Je connais « salut », « aide », « test », et 3 mots à moi : « motdepasse » et « arnaque » et « phishing ». »

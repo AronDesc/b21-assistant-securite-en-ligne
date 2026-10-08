@@ -5,14 +5,15 @@ export const LIMITE = 200;
 
 const MOTS = {
   motdepasse: 'Un bon mot de passe est long, unique pour chaque site, et ne se partage avec personne, même pas un ami.',
-  arnaque: 'Une arnaque te presse ou te promet un cadeau trop beau : ne clique pas, ne donne rien, et parles-en à un adulte.'
+  arnaque: 'Une arnaque te presse ou te promet un cadeau trop beau : ne clique pas, ne donne rien, et parles-en à un adulte.',
+  phishing: 'Le phishing, c’est un faux message (mail, SMS, DM) qui imite un site connu pour voler tes identifiants : vérifie l’adresse et ne clique pas sur le lien.'
 };
 
 const liste = Object.keys(MOTS).map((mot) => `« ${mot} »`).join(' et ');
 
 const REPONSES = {
   salut: 'Bonjour ! Je suis Cap Web, un assistant à règles. Écrivez « aide » pour voir ce que je sais faire.',
-  aide: `Je connais « salut », « aide », « test », et deux mots à moi : ${liste}.`,
+  aide: `Je connais « salut », « aide », « test », et ${Object.keys(MOTS).length} mots à moi : ${liste}.`,
   test: 'Test bien reçu : mes règles fonctionnent.',
   repli: 'Je ne connais pas encore cette phrase. Écrivez « aide » pour voir les mots que je connais.'
 };
