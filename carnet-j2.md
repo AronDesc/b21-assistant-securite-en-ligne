@@ -90,3 +90,18 @@ Chacun, une phrase : ce que vous savez faire ce soir et que vous ne saviez pas f
 - Alerte affichée (catégorie « Names and labels ») : « Form elements do not have associated labels ». Sans `label`, un lecteur d'écran ne peut pas annoncer à quoi sert le champ.
 - Label remis ensuite à l'identique.
 - Essai au clavier seul : Tab jusqu'au champ, message « Salut, j'ai besoin d'aide », envoi au clavier. Le message part, Cap Web répond par le repli (« Je ne connais pas encore cette phrase… ») parce qu'il ne reconnaît que des mots exacts, et le focus revient dans le champ, prêt pour le message suivant.
+
+### Étape 11 · Les quatre attaques
+
+| Attaque | Résultat |
+|---|---|
+| Serveur arrêté, puis « conseil » | tient : « Le serveur ne répond pas : conseil indisponible. », pas d'écran blanc |
+| Message de 250 caractères (limite 200) | tient : refusé, erreur visible « Le message doit contenir 200 caractères au maximum. » |
+| `<b>test</b>` dans le champ | tient : affiché tel quel, chevrons compris (`textContent`, pas `innerHTML`) |
+| Largeur 375 px | tient : rien ne déborde, pas de défilement horizontal |
+
+Aucun commit `fix:` nécessaire. README d'`atelier` mis à jour (but, installation, lancement, tests, route `/api/conseil`, arborescence), puis relu en suivant ses commandes une par une dans le clone `clone-b21`.
+
+### Étape 12 · Le bilan
+
+Bilan individuel dans `atelier/bilan/Aron.md` : niveau de départ, deux acquis prouvés par des commits, deux points à renforcer, un objectif.
