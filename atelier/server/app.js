@@ -21,6 +21,13 @@ const TYPES = {
   'js/view.js': 'text/javascript; charset=utf-8'
 };
 
+// Conseils renvoyés par /api/conseil.
+const CONSEILS = [
+  'Active la double authentification sur tes comptes importants.',
+  'Avant de cliquer sur un lien, survole-le pour vérifier la vraie adresse.',
+  'Ne publie jamais ton adresse, ton numéro ou le nom de ton lycée en public.'
+];
+
 export function createApp({ publicDir, version = 'dev' } = {}) {
   const serveur = http.createServer((req, res) => {
     traiter(req, res).catch(() => {
@@ -51,6 +58,14 @@ export function createApp({ publicDir, version = 'dev' } = {}) {
       return;
     }
     // Métadonnée de version fournie au démarrage.
+    // Un conseil de sécurité en ligne, tiré au hasard.
+    if (chemin === '/api/conseil') {
+      const conseil = CONSEILS[Math.floor(Math.random() * CONSEILS.length)];
+      const corps = JSON.stringify({ conseil });
+      res.writeHead(200, { 'content-type': 'application/json; charset=utf-8', 'content-length': Buffer.byteLength(corps) });
+      res.end(methode === 'HEAD' ? '' : corps);
+      return;
+    }
     if (chemin === '/version.json') {
       const corps = JSON.stringify({ version });
       res.writeHead(200, { 'content-type': 'application/json; charset=utf-8', 'content-length': Buffer.byteLength(corps) });
